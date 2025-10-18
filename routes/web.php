@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PagesController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,5 +19,6 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/',[PagesController::class,'index']);
+Route::get('/',[PagesController::class,'index'])->name('index');
+Route::get('/home', [HomeController::class,'home'])->name('page_home');
 
